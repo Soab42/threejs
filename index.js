@@ -1,2 +1,2 @@
-const audio = new Audio("./audio/eid.mp3");
+const audio = new Audio("./audio/joyful.mp3");
 audio.play();

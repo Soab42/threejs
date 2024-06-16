@@ -19,6 +19,10 @@ renderer.shadowMap.type = THREE.PCFShadowMap;
 
 // add background image
 // Load background texture
+const bgLoader = new THREE.TextureLoader();
+// const bgTexture = bgLoader.load("./public/makka.jpg");
+// scene.background = bgTexture;
+// scene.environment = bgTexture;
 
 rgbeLoader.load(bigWindow, (texture) => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -33,13 +37,19 @@ export const camera = new THREE.PerspectiveCamera(
   1000
 );
 camera.position.z = 5;
-camera.position.set(0, 0, 5.5);
+camera.position.set(12, 10, 12);
 scene.add(camera);
+
+// fixed camera zoom
+camera.zoom = 0.5;
 
 // add orbit controls
 export const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
-
+controls.maxDistance = 10;
+controls.minDistance = 5;
+controls.maxZoom = 10;
+controls.minZoom = 0.5;
 // add renderer
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);

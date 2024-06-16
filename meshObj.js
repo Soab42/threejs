@@ -4,6 +4,7 @@ import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import scene from "./main";
 import { MeshSurfaceSampler } from "three/examples/jsm/math/MeshSurfaceSampler.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { metallicPalette, oceanicPalette } from "./colorPallete";
 
 // Add sphere
 export const addSphere = (size, position, color) => {
@@ -69,11 +70,11 @@ export const addSectionAndText = (
   callback
 ) => {
   const sectionGeometry = new THREE.BoxGeometry(1.4, 0.02, 2.8);
-  const sectionMaterial = new THREE.MeshStandardMaterial({
-    color: "green",
-    roughness: 0.5,
-  });
-  const section = new THREE.Mesh(sectionGeometry, sectionMaterial);
+  // const sectionMaterial = new THREE.MeshStandardMaterial({
+  //   color: "green",
+  //   roughness: 0.5,
+  // });
+  const section = new THREE.Mesh(sectionGeometry, oceanicPalette.teal);
   section.castShadow = true;
   section.rotateY(Math.PI / 2);
   section.rotateZ(Math.PI / 2);
@@ -81,6 +82,7 @@ export const addSectionAndText = (
   section.name = sectionName;
   scene.add(section);
   clickableObjects.push(section);
+
   addFont(sectionName, fontName, callback);
   return section;
 };
@@ -124,17 +126,17 @@ export const addFont = (text, fontName = "english", callback) => {
 export const addFloor = () => {
   const geometryFloor = new THREE.PlaneGeometry(10, 10);
   const materialFloor = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
-  const floor = new THREE.Mesh(geometryFloor, materialFloor);
-  floor.material.side = THREE.DoubleSide;
-  floor.receiveShadow = true;
-  floor.rotation.x = -Math.PI * 0.5;
-  floor.position.set(0, -1, 0);
-  scene.add(floor);
-  return floor;
+  // const floor = new THREE.Mesh(geometryFloor, materialFloor);
+  // floor.material.side = THREE.DoubleSide;
+  // floor.receiveShadow = true;
+  // floor.rotation.x = -Math.PI * 0.5;
+  // floor.position.set(0, -1, 0);
+  // scene.add(floor);
+  // return floor;
 };
 
 // add 3d object
-export const add3dObject = (url, position, scale) => {
+export const add3dObject = (url, position, scale, callback) => {
   let barModel;
   const assetLoader = new GLTFLoader();
   assetLoader.load(url, (gltf) => {
@@ -143,6 +145,6 @@ export const add3dObject = (url, position, scale) => {
     model.scale.set(...scale);
     barModel = model;
     scene.add(model);
+    if (callback) callback(model);
   });
-  return barModel;
 };
