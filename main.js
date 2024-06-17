@@ -24,11 +24,11 @@ const bgLoader = new THREE.TextureLoader();
 // scene.background = bgTexture;
 // scene.environment = bgTexture;
 
-rgbeLoader.load(bigWindow, (texture) => {
-  texture.mapping = THREE.EquirectangularReflectionMapping;
-  scene.background = texture;
-  scene.environment = texture;
-});
+// rgbeLoader.load(bigWindow, (texture) => {
+//   texture.mapping = THREE.EquirectangularReflectionMapping;
+//   scene.background = texture;
+//   scene.environment = texture;
+// });
 // create a camera
 export const camera = new THREE.PerspectiveCamera(
   75,
