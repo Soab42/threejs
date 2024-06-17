@@ -91,7 +91,7 @@ export const addSectionAndText = (
 const fontLoader = new FontLoader();
 
 export const addFont = (text, fontName = "english", callback) => {
-  fontLoader.load(`./public/font/${fontName}.json`, (font) => {
+  fontLoader.load(`./font/${fontName}.json`, (font) => {
     // Create the text geometry
     const textGeometry = new TextGeometry(text, {
       font: font,

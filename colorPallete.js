@@ -238,7 +238,7 @@ export {
   pastelPalette,
   metallicPalette,
 };
-// Example: creating a floor with different sections of the oceanic palette
+// // Example: creating a floor with different sections of the oceanic palette
 // const floorGeometry = new THREE.PlaneGeometry(10, 10);
 // const materials = [
 //   oceanicPalette.lightAqua,
