@@ -37,7 +37,7 @@ export const camera = new THREE.PerspectiveCamera(
   1000
 );
 camera.position.z = 5;
-camera.position.set(12, 10, 12);
+camera.position.set(12, 15, 12);
 scene.add(camera);
 
 // fixed camera zoom

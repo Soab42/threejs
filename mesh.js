@@ -39,14 +39,14 @@ const section = addSectionAndText(
   clickableObjects,
   "english",
   (textMesh) => {
-    textMesh.position.set(0.5, 5, 0);
+    textMesh.position.set(0.5, 3, 0);
     textMesh.scale.set(0.65, 0.65, 0.65);
     textMesh.rotation.y = Math.PI;
   }
 );
 // section.material.color.set("red");
 section.scale.set(1, 2, 2);
-section.position.set(-2, 5.2, 0);
+section.position.set(-2, 3.2, 0);
 
 const section2 = addSectionAndText(
   "ঈদ মুবারক",
@@ -54,14 +54,14 @@ const section2 = addSectionAndText(
   clickableObjects,
   "bangla",
   (textMesh) => {
-    textMesh.position.set(4.5, 5, 2);
+    textMesh.position.set(4.5, 3, 2);
     textMesh.scale.set(0.65, 0.65, 0.65);
     textMesh.rotation.y = Math.PI;
   }
 );
 // section2.material.color.set("red");
 section2.scale.set(1, 2, 2);
-section2.position.set(2.8, 5.2, 2);
+section2.position.set(2.8, 3.2, 2);
 
 const section3 = addSectionAndText(
   "ঈদ মুবারক",
@@ -69,13 +69,13 @@ const section3 = addSectionAndText(
   clickableObjects,
   "bangla",
   (textMesh) => {
-    textMesh.position.set(1, 5, 2);
+    textMesh.position.set(1, 3, 2);
     textMesh.scale.set(0.65, 0.65, 0.65);
   }
 );
 // section3.material.color.set("red");
 section3.scale.set(1, 2, 2);
-section3.position.set(2.8, 5.2, 2);
+section3.position.set(2.8, 3.2, 2);
 
 const section4 = addSectionAndText(
   "Eid Mubarak",
@@ -83,13 +83,13 @@ const section4 = addSectionAndText(
   clickableObjects,
   "english",
   (textMesh) => {
-    textMesh.position.set(-4.4, 5, 0);
+    textMesh.position.set(-4.4, 3, 0);
     textMesh.scale.set(0.65, 0.65, 0.65);
   }
 );
 // section.material.color.set("red");
 section4.scale.set(1, 2, 2);
-section4.position.set(-2, 5.2, 0);
+section4.position.set(-2, 3.2, 0);
 
 // rotate opposite direction
 
