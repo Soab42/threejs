@@ -1,5 +1,5 @@
 const audio = new Audio("./audio/joyful.mp3");
-audion.volume = 0.5 ;
+audio.volume = 0.2;
 // Attempt to autoplay
 audio.play().catch(function (error) {
   console.warn("Autoplay failed:", error);
