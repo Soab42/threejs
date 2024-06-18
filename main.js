@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
-import bigWindow from "./hdr/BigWindowTree_Thea_2.hdr";
+import bigWindow from "./public/hdr/BigWindowTree_Thea_2.hdr";
 export const loader = new GLTFLoader();
 export const rgbeLoader = new RGBELoader();
 // create a scene
